@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengalihkan...</title>
+    <script>
+        // Target Google Apps Script Web App URL Anda
+        const targetUrl = "https://script.google.com/macros/s/AKfycbwUWIXhv7nPjEQ0dqaEm86Scj81z9Araqga2-jaVSr7dO-Rs9vqTZYzz4_HcwKdJFQl/exec";
+
+        // Mengambil parameter query (jika ada) dari URL GitHub Pages
+        const queryString = window.location.search;
+        
+        // Menggabungkan target URL dengan parameter
+        const finalUrl = targetUrl + queryString;
+
+        // Redirect otomatis secara instan
+        window.location.replace(finalUrl);
+    </script>
+</head>
+<body style="font-family: Arial, sans-serif; text-align: center; padding-top: 50px; background-color: #0b0f19; color: #ffffff;">
+    <h3>Sedang mengalihkan ke aplikasi...</h3>
+    <p>Jika Anda tidak dialihkan secara otomatis, <a id="fallback-link" href="#" style="color: #00ffaa;">klik di sini</a>.</p>
+    <script>
+        document.getElementById('fallback-link').href = targetUrl + queryString;
+    </script>
+</body>
+</html>
